@@ -2,6 +2,6 @@
   "crs": { "type": "name", "properties": {"name": "urn:ogc:def:crs:OGC:1.3:CRS84"}},
   "features": [
 {"type": "Feature", "properties": {"id": "53394526"}, "geometry": {"type": "Point","coordinates": [139.70625, 35.7041666]}},
-{"type": "Feature","properties": {},"geometry": {"type": "LineString","coordinates": [[139.7, 35.7],[139.708333, 35.7],[139.708333, 35.7125],[139.7, 35.7125]]}},
+{"type": "Feature","properties": {},"geometry": {"type": "LineString","coordinates": [[139.7, 35.7],[139.7125, 35.7],[139.7125, 35.7083333],[139.7, 35.7083333],[[139.7, 35.7]]}},
 ]
 }

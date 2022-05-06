@@ -4,10 +4,10 @@
 "version": "2",
 "minzoom": "5",
 "maxzoom": "16",
-"center": "139.708333,35.712500,16",
-"bounds": "139.700000,35.700000,139.708333,35.712500",
+"center": "139.706250,35.704167,16",
+"bounds": "139.706250,35.704167,139.706250,35.704167",
 "type": "overlay",
 "format": "pbf",
 "generator": "tippecanoe v1.32.10",
-"json": "{\"vector_layers\": [ { \"id\": \"test0\", \"description\": \"\", \"minzoom\": 5, \"maxzoom\": 16, \"fields\": {\"id\": \"String\"} } ],\"tilestats\": {\"layerCount\": 1,\"layers\": [{\"layer\": \"test0\",\"count\": 2,\"geometry\": \"Point\",\"attributeCount\": 1,\"attributes\": [{\"attribute\": \"id\",\"count\": 1,\"type\": \"string\",\"values\": [\"53394526\"]}]}]}}"
+"json": "{\"vector_layers\": [ { \"id\": \"test0\", \"description\": \"\", \"minzoom\": 5, \"maxzoom\": 16, \"fields\": {\"id\": \"String\"} } ],\"tilestats\": {\"layerCount\": 1,\"layers\": [{\"layer\": \"test0\",\"count\": 1,\"geometry\": \"Point\",\"attributeCount\": 1,\"attributes\": [{\"attribute\": \"id\",\"count\": 1,\"type\": \"string\",\"values\": [\"53394526\"]}]}]}}"
 }

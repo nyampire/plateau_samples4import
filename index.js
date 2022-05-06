@@ -65,7 +65,7 @@ var osm = L.tileLayer(
 osm.addTo(map);
 
 var mvtSource0 = new L.TileLayer.MVTSource({
-    url: "https://yuuhayashi.github.io/coverageWeb/tiles/test0/{z}/{x}/{y}.pbf",
+    url: "https://yuuhayashi.github.io/plateau_samples4import/tile/test0/{z}/{x}/{y}.pbf",
     style: function (feature) {
         var style = {};
         style.strokeColor = 'rgba(255,0,0,0.5)';
