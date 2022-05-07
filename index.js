@@ -68,15 +68,29 @@ var mvtSource0 = new L.TileLayer.MVTSource({
     url: "https://yuuhayashi.github.io/plateau_samples4import/tile/test0/{z}/{x}/{y}.pbf",
     style: function (feature) {
         var style = {};
-        style.strokeColor = 'rgba(255,0,0,0.5)';
-        style.radius = 15;
+        style.color = 'magenta';
+        style.radius = 8;
         style.selected = {
-          radius: 20
+          radius: 12
         };
         return style;
     }
 });
 map.addLayer(mvtSource0);
+
+var mvt10207 = new L.TileLayer.MVTSource({
+    url: "https://yuuhayashi.github.io/plateau_samples4import/tile/10207/{z}/{x}/{y}.pbf",
+    style: function (feature) {
+        var style = {};
+        style.color = 'magenta';
+        style.radius = 8;
+        style.selected = {
+          radius: 12
+        };
+        return style;
+    }
+});
+map.addLayer(mvt10207);
 
 //Globals that we can change later.
 var fillColor = 'rgba(149,139,255,0.4)';
