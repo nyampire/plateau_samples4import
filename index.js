@@ -1,7 +1,7 @@
 var debug = {};
 
 var map = L.map('map',{
-  center: [36.131, 140.241],
+  center: [36.249, 139.533],
   zoom: 11,
   minZoom: 6,
   maxZoom: 16,
