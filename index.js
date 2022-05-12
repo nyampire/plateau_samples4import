@@ -1,7 +1,7 @@
 var debug = {};
 
 var map = L.map('map',{
-  center: [36.249, 139.533],
+  center: [35.658, 139.745],
   zoom: 11,
   minZoom: 6,
   maxZoom: 16,
@@ -64,6 +64,7 @@ var osm = L.tileLayer(
 );
 osm.addTo(map);
 
+// テストデータ
 var mvtSource0 = new L.TileLayer.MVTSource({
     url: "https://yuuhayashi.github.io/plateau_samples4import/tile/test0/{z}/{x}/{y}.pbf",
     style: function (feature) {
@@ -74,10 +75,20 @@ var mvtSource0 = new L.TileLayer.MVTSource({
           radius: 12
         };
         return style;
-    }
+    },
 });
 map.addLayer(mvtSource0);
 
+// テストデータ: アイコン表示
+$.getJSON("https://yuuhayashi.github.io/plateau_samples4import/tile/test.geojson", function(data) {
+    L.geoJson(data, {
+        onEachFeature: function (feature, layer) {
+            layer.bindPopup(feature.properties.id)
+        }
+    }).addTo(map);
+});
+
+// 10207 館林市
 var mvt10207 = new L.TileLayer.MVTSource({
     url: "https://yuuhayashi.github.io/plateau_samples4import/tile/10207/{z}/{x}/{y}.pbf",
     style: function (feature) {
@@ -92,9 +103,22 @@ var mvt10207 = new L.TileLayer.MVTSource({
 });
 map.addLayer(mvt10207);
 
+// 10207 館林市: アイコン表示
+$.getJSON("https://yuuhayashi.github.io/plateau_samples4import/tile/10207_tatebayashi-shi_2020.geojson", function(data) {
+    L.geoJson(data, {
+        onEachFeature: function (feature, layer) {
+            layer.bindPopup(feature.properties.id)
+        }
+    }).addTo(map);
+});
+
+
 //Globals that we can change later.
 var fillColor = 'rgba(149,139,255,0.4)';
 var strokeColor = 'rgb(20,20,20)';
+
+//Add layer
+mvt10207.addTo(map);
 
 //Add layer
 mvtSource0.addTo(map);
