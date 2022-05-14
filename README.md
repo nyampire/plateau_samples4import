@@ -8,16 +8,16 @@
 
 ## [配信サイト](https://yuuhayashi.github.io/plateau_samples4import/)
 
-[配信サイト](https://yuuhayashi.github.io/plateau_samples4import/)
+[配信サイト](https://nyampire.github.io/plateau_samples4import/)
 
 ![image](lib/Screenshot_2022-05-14.png)
 
-[配信サイト](https://yuuhayashi.github.io/plateau_samples4import/)で、PLATEAUの変換データをダウンロードすることができます。
+[配信サイト](https://nyampire.github.io/plateau_samples4import/)で、PLATEAUの変換データをダウンロードすることができます。
 
 
 ## 配信ファイル
 
-[配信サイト](https://yuuhayashi.github.io/plateau_samples4import/)からダウンロードしたZIPファイルを解凍すると、以下4つのファイルが展開されます。
+[配信サイト](https://nyampire.github.io/plateau_samples4import/)からダウンロードしたZIPファイルを解凍すると、以下4つのファイルが展開されます。
 
 各ファイルは、[インポート作業手順](https://qiita.com/nyampire/items/1c10afdd36750c87154d)のなかで行う、1st, 2nd, 3rdのそれぞれのスクリプトを回した結果です。
 

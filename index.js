@@ -1,5 +1,6 @@
 var debug = {};
-var site = "https://yuuhayashi.github.io/plateau_samples4import/";
+var site = "https://nyampire.github.io/plateau_samples4import/";
+
 
 var map = L.map('map',{
   center: [35.658, 139.745],
