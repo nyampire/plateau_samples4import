@@ -5,6 +5,11 @@
 
 **このデータは絶対に、OpenStreetMapへのアップロードを行わないでください！**
 
+## 配信サイト
+
+[配信サイト](https://yuuhayashi.github.io/plateau_samples4import/)
+
+
 ## ディレクトリ構造
 それぞれのサンプルには、以下5つのディレクトリが用意されています。
 ディレクトリには、[インポート作業手順](https://qiita.com/nyampire/items/1c10afdd36750c87154d)のなかで行う、1st, 2nd, 3rd, 4thのそれぞれのスクリプトを回した結果が格納されています。
