@@ -107,7 +107,7 @@ map.addLayer(mvt10207);
 $.getJSON("https://yuuhayashi.github.io/plateau_samples4import/tile/10207_tatebayashi-shi_2020.geojson", function(data) {
     L.geoJson(data, {
         onEachFeature: function (feature, layer) {
-            layer.bindPopup(feature.properties.id)
+            layer.bindPopup(feature.properties.id+"<br/>"+feature.properties.version)
         }
     }).addTo(map);
 });
