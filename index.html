@@ -26,6 +26,7 @@
                     <tr>
                         <th>code</th>
                         <th>地区名</th>
+                        <th>フォルダ名</th>
                     </tr>
                 </thead>
                 <tbody id="data_list"></tbody>
@@ -47,6 +48,7 @@ window.addEventListener('DOMContentLoaded', function() {
             $("#data_list").append("<tr id=\"data_id" + count + "\"></tr>") ;
             $("#data_list #data_id" + count).append("<td class='code'>" + this.code + "</td>") ;
             $("#data_list #data_id" + count).append("<td class='name'>" + this.name + "</td>") ;
+            $("#data_list #data_id" + count).append("<td class='path'>" + this.path + "</td>") ;
             count++ ;
         });
     });

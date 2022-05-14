@@ -8,53 +8,7 @@ var map = L.map('map',{
   maxZoom: 16,
   contextmenu: true,
   contextmenuWidth: 180,
-  
-    contextmenuItems: [{
-        text: 'この地点を地図の中央に',
-        callback: setCenterMap
-      },
-      {
-        text: '取得(地図中央1km範囲)',
-        callback: showLatLng
-      },
-      {
-        text: '取得(地図中央3km範囲)',
-        callback: showLatLng3
-      },
-      {
-        text: '取得(地図中央5km範囲)',
-        callback: showLatLng5
-      },
-      {
-        text: '取得(地図中央10km範囲)',
-        callback: showLatLng10
-      },
-      {
-        text: '取得(地図中央20km範囲)',
-        callback: showLatLng20
-      }]
-    });
-
-    function showLatLng (e) {
-        location.href = "http://surveyor.mydns.jp/unMapped/api/kmz/busstop?latlng="+ e.latlng +"&km=1";
-    }
-    function showLatLng3 (e) {
-        location.href = "http://surveyor.mydns.jp/unMapped/api/kmz/busstop?latlng="+ e.latlng +"&km=3";
-    }
-    function showLatLng5 (e) {
-        location.href = "http://surveyor.mydns.jp/unMapped/api/kmz/busstop?latlng="+ e.latlng +"&km=5";
-    }
-    function showLatLng10 (e) {
-        location.href = "http://surveyor.mydns.jp/unMapped/api/kmz/busstop?latlng="+ e.latlng +"&km=10";
-    }
-    function showLatLng20 (e) {
-        location.href = "http://surveyor.mydns.jp/unMapped/api/kmz/busstop?latlng="+ e.latlng +"&km=20";
-    }
-
-    function setCenterMap (e) {
-        map.panTo(e.latlng);
-    }
-    map.locate({setView: true, maxZoom: 16, timeout: 20000});
+});
 
 //OSMレイヤー追加
 var osm = L.tileLayer(
@@ -65,39 +19,94 @@ var osm = L.tileLayer(
 );
 osm.addTo(map);
 
-// 10207 館林市
-/*
-var mvt10207 = new L.TileLayer.MVTSource({
-    url: "https://yuuhayashi.github.io/plateau_samples4import/tile/10207/{z}/{x}/{y}.pbf",
-    style: function (feature) {
-        var style = {};
-        style.color = 'magenta';
-        style.radius = 8;
-        style.selected = {
-          radius: 12
-        };
-        return style;
-    }
-});
-map.addLayer(mvt10207);
-*/
-
 // テストデータ: アイコン表示
 $.getJSON(site+"tile/test.geojson", function(data) {
     L.geoJson(data, {
         onEachFeature: function (feature, layer) {
-            layer.bindPopup(feature.properties.id)
+            layer.bindPopup(feature.properties.id);
         }
     }).addTo(map);
 });
 
 // 10207 館林市
-var path10207 = "10207_tatebayashi-shi_2020";
-$.getJSON(site+path10207+"/bldg/"+path10207+".geojson", function(data) {
+var dpath = "10207_tatebayashi-shi_2020";
+$.getJSON(site+dpath+"/bldg/"+dpath+".geojson", function(data) {
     L.geoJson(data, {
         onEachFeature: function (feature, layer) {
 			if (feature.geometry.type === "Point") {
-	            layer.bindPopup("code: "+ feature.properties.id+"<br/>version: "+feature.properties.version+"<br/><a href='"+ site+path10207+"/bldg/"+feature.properties.path +".zip'>DOWNLOAD</a>")
+				if (feature.properties.name === "undefined") {
+		            layer.bindPopup("code: "+ feature.properties.id
+		            	+"<br/>version: "+feature.properties.version);
+				}
+				else {
+		            layer.bindPopup("code: "+ feature.properties.id
+		            	+"<br/>version: "+feature.properties.version
+		            	+"<br/>name: "+feature.properties.name
+		            	+"<br/><a href='"+ site+dpath+"/bldg/"+feature.properties.name +".zip'>DOWNLOAD</a>");
+				}
+			}
+        }
+    }).addTo(map);
+});
+
+// 11230_niiza-shi_2020
+var dpath = "11230_niiza-shi_2020";
+$.getJSON(site+dpath+"/bldg/"+dpath+".geojson", function(data) {
+    L.geoJson(data, {
+        onEachFeature: function (feature, layer) {
+			if (feature.geometry.type === "Point") {
+				if (feature.properties.name === "undefined") {
+		            layer.bindPopup("code: "+ feature.properties.id
+		            	+"<br/>version: "+feature.properties.version);
+				}
+				else {
+		            layer.bindPopup("code: "+ feature.properties.id
+		            	+"<br/>version: "+feature.properties.version
+		            	+"<br/>name: "+feature.properties.name
+		            	+"<br/><a href='"+ site+dpath+"/bldg/"+feature.properties.name +".zip'>DOWNLOAD</a>");
+				}
+			}
+        }
+    }).addTo(map);
+});
+
+// 11326_moroyama-machi_2020
+var dpath = "11326_moroyama-machi_2020";
+$.getJSON(site+dpath+"/bldg/"+dpath+".geojson", function(data) {
+    L.geoJson(data, {
+        onEachFeature: function (feature, layer) {
+			if (feature.geometry.type === "Point") {
+				if (feature.properties.name === "undefined") {
+		            layer.bindPopup("code: "+ feature.properties.id
+		            	+"<br/>version: "+feature.properties.version);
+				}
+				else {
+		            layer.bindPopup("code: "+ feature.properties.id
+		            	+"<br/>version: "+feature.properties.version
+		            	+"<br/>name: "+feature.properties.name
+		            	+"<br/><a href='"+ site+dpath+"/bldg/"+feature.properties.name +".zip'>DOWNLOAD</a>");
+				}
+			}
+        }
+    }).addTo(map);
+});
+
+// 20209_ina-shi_2020_citygml_4_op
+var dpath = "20209_ina-shi_2020_citygml_4_op";
+$.getJSON(site+dpath+"/bldg/"+dpath+".geojson", function(data) {
+    L.geoJson(data, {
+        onEachFeature: function (feature, layer) {
+			if (feature.geometry.type === "Point") {
+				if (feature.properties.name === "undefined") {
+		            layer.bindPopup("code: "+ feature.properties.id
+		            	+"<br/>version: "+feature.properties.version);
+				}
+				else {
+		            layer.bindPopup("code: "+ feature.properties.id
+		            	+"<br/>version: "+feature.properties.version
+		            	+"<br/>name: "+feature.properties.name
+		            	+"<br/><a href='"+ site+dpath+"/bldg/"+feature.properties.name +".zip'>DOWNLOAD</a>");
+				}
 			}
         }
     }).addTo(map);
