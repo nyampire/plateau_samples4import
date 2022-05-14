@@ -104,7 +104,6 @@ var mvt10207 = new L.TileLayer.MVTSource({
 map.addLayer(mvt10207);
 
 // 10207 館林市: アイコン表示
-/*
 $.getJSON("https://yuuhayashi.github.io/plateau_samples4import/tile/10207_tatebayashi-shi_2020.geojson", function(data) {
     L.geoJson(data, {
         onEachFeature: function (feature, layer) {
@@ -112,7 +111,6 @@ $.getJSON("https://yuuhayashi.github.io/plateau_samples4import/tile/10207_tateba
         }
     }).addTo(map);
 });
-*/
 
 //Globals that we can change later.
 var fillColor = 'rgba(149,139,255,0.4)';
