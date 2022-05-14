@@ -1,20 +1,32 @@
 # plateau_samples4import
 このデータは、現在OpenStreetMapへのインポートが提案され、議論段階にあるPlateau建物データについて、スクリプトでデータを変換した際のサンプルを提供するものです。
 
-変換は2022年4月上旬に行われ、[スクリプト](https://github.com/yuuhayashi/citygml-osm)は[バージョン1.4.4](https://github.com/yuuhayashi/citygml-osm/releases/tag/v1.4.4)を利用しています。
+変換は2022年５月上旬に行われ、[スクリプト](https://github.com/yuuhayashi/citygml-osm)は[バージョン1.4.6](https://github.com/yuuhayashi/citygml-osm/releases/tag/v1.4.6)を利用しています。
+
 
 **このデータは絶対に、OpenStreetMapへのアップロードを行わないでください！**
 
-## ディレクトリ構造
-それぞれのサンプルには、以下5つのディレクトリが用意されています。
-ディレクトリには、[インポート作業手順](https://qiita.com/nyampire/items/1c10afdd36750c87154d)のなかで行う、1st, 2nd, 3rd, 4thのそれぞれのスクリプトを回した結果が格納されています。
+## [配信サイト](https://yuuhayashi.github.io/plateau_samples4import/)
+
+[配信サイト](https://nyampire.github.io/plateau_samples4import/)
+
+![image](lib/Screenshot_2022-05-14.png)
+
+[配信サイト](https://nyampire.github.io/plateau_samples4import/)で、PLATEAUの変換データをダウンロードすることができます。
+
+
+## 配信ファイル
+
+[配信サイト](https://nyampire.github.io/plateau_samples4import/)からダウンロードしたZIPファイルを解凍すると、以下4つのファイルが展開されます。
+
+各ファイルは、[インポート作業手順](https://qiita.com/nyampire/items/1c10afdd36750c87154d)のなかで行う、1st, 2nd, 3rdのそれぞれのスクリプトを回した結果です。
 
 ```
   .
-├── 0_original
-├── 1_just_convert
-├── 2_downloaded_osm
-├── 3_mechanical_merge
+├── 0_original　　　　　　'53386086_bldg_6697_op.gml'
+├── 1_just_convert         '53386086_bldg_6697_op.osm'
+├── 2_downloaded_osm       '53386086_bldg_6697_op.org.osm'
+├── 3_mechanical_merge     '53386086_bldg_6697_op.mrg.osm'
 └── 4_ready4upload
 ```
 

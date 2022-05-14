@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset='utf-8'/>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>OpenStreetMap coverage (amenity=fuel)</title>
+ <link rel="stylesheet" href="lib/surveyor.css">
+ <link rel="stylesheet" href="lib/leaflet-0.7.3/leaflet.css"/>
+ <link rel="stylesheet" href="lib/Leaflet.MapCenterCoord/L.Control.MapCenterCoord.css" />
+ <link rel="stylesheet" href="lib/Leaflet.contextmenu/leaflet.contextmenu.min.css" />
+</head>
+<body>
+<div id="wrap">
+    <div class="header">
+        <H1>PLATEAU OSMデータ</H1>
+        <div id="map" style="height: 720px; width: 98%;"></div>
+        <p><span style="color:red">●</span>:未入力, <span style="color:gold">●</span>:とりあえず入力済み, <span style="color:lime">●</span>:入力済み</p>
+        <hr/>
+    </div>
+
+    <div id="inner">
+        <div id="sideWrap">
+            <table>
+                <caption>PLATEAU 作業対象リスト</caption>
+                <thead>
+                    <tr>
+                        <th>code</th>
+                        <th>地区名</th>
+                        <th>フォルダ名</th>
+                    </tr>
+                </thead>
+                <tbody id="data_list"></tbody>
+            </table>
+        </div>
+        <div class="clear"><hr /></div>
+    </div>
+</div>
+<script src="lib/leaflet-0.7.3/leaflet-src.js"></script>
+<script src="lib/Leaflet.MapboxVectorTile.js"></script>
+<script src="lib/Leaflet.MapCenterCoord/L.Control.MapCenterCoord.js"></script>
+<script src="lib/Leaflet.contextmenu/leaflet.contextmenu.min.js"></script>
+<script src="lib/jquery-2.1.1.min.js"></script>
+ <script>
+window.addEventListener('DOMContentLoaded', function() {
+    $.getJSON("https://yuuhayashi.github.io/plateau_samples4import/index.json", function(data) {
+        var count = 0 ;
+        $(data.list).each(function() {
+            $("#data_list").append("<tr id=\"data_id" + count + "\"></tr>") ;
+            $("#data_list #data_id" + count).append("<td class='code'>" + this.code + "</td>") ;
+            $("#data_list #data_id" + count).append("<td class='name'>" + this.name + "</td>") ;
+            $("#data_list #data_id" + count).append("<td class='path'>" + this.path + "</td>") ;
+            count++ ;
+        });
+    });
+});
+ </script>
+<script src="index.js"></script>
+
+</body>
+</html>
