@@ -33,19 +33,19 @@ var dpath10207 = "10207_tatebayashi-shi_2020";
 $.getJSON(site+dpath10207+"/bldg/"+dpath10207+".geojson", function(data) {
     L.geoJson(data, {
         onEachFeature: function (feature, layer) {
-		if (feature.geometry.type === "Point") {
-			if (feature.properties.name === "undefined") {
-		    		layer.bindPopup("code: "+ feature.properties.id
-		    			+"<br/>version: "+feature.properties.version);
-			}
-			else {
-			    layer.bindPopup("code: "+ feature.properties.id
-			    	+"<br/>version: "+feature.properties.version
-			    	+"<br/>name: "+feature.properties.name
-			    	+"<br/><a href='"+ site+dpath10207+"/bldg/"+feature.properties.name +".zip'>DOWNLOAD</a>");
+			if (feature.geometry.type === "Point") {
+				if (feature.properties.path === "undefined") {
+				    layer.bindPopup("code: "+ feature.properties.id
+				    	+"<br/>version: "+feature.properties.version);
+				}
+				else {
+				    layer.bindPopup("code: "+ feature.properties.id
+				    	+"<br/>version: "+feature.properties.version
+				    	+"<br/>path: "+feature.properties.path
+				    	+"<br/><a href='"+ site +feature.properties.path +"'>DOWNLOAD</a>");
+				}
 			}
 		}
-        }
     }).addTo(map);
 });
 
@@ -54,19 +54,19 @@ var dpath11230 = "11230_niiza-shi_2020";
 $.getJSON(site+dpath11230+"/bldg/"+dpath11230+".geojson", function(data) {
     L.geoJson(data, {
         onEachFeature: function (feature, layer) {
-		if (feature.geometry.type === "Point") {
-			if (feature.properties.name === "undefined") {
-			    layer.bindPopup("code: "+ feature.properties.id
-			    	+"<br/>version: "+feature.properties.version);
-			}
-			else {
-			    layer.bindPopup("code: "+ feature.properties.id
-			    	+"<br/>version: "+feature.properties.version
-			    	+"<br/>name: "+feature.properties.name
-			    	+"<br/><a href='"+ site+dpath11230+"/bldg/"+feature.properties.name +".zip'>DOWNLOAD</a>");
+			if (feature.geometry.type === "Point") {
+				if (feature.properties.path === "undefined") {
+				    layer.bindPopup("code: "+ feature.properties.id
+				    	+"<br/>version: "+feature.properties.version);
+				}
+				else {
+				    layer.bindPopup("code: "+ feature.properties.id
+				    	+"<br/>version: "+feature.properties.version
+				    	+"<br/>path: "+feature.properties.path
+				    	+"<br/><a href='"+ site +feature.properties.path +"'>DOWNLOAD</a>");
+				}
 			}
 		}
-        }
     }).addTo(map);
 });
 
@@ -75,19 +75,19 @@ var dpath11326 = "11326_moroyama-machi_2020";
 $.getJSON(site+dpath11326+"/bldg/"+dpath11326+".geojson", function(data) {
     L.geoJson(data, {
         onEachFeature: function (feature, layer) {
-		if (feature.geometry.type === "Point") {
-			if (feature.properties.name === "undefined") {
-			    layer.bindPopup("code: "+ feature.properties.id
-			    	+"<br/>version: "+feature.properties.version);
-			}
-			else {
-			    layer.bindPopup("code: "+ feature.properties.id
-			    	+"<br/>version: "+feature.properties.version
-			    	+"<br/>name: "+feature.properties.name
-			    	+"<br/><a href='"+ site+dpath11326+"/bldg/"+feature.properties.name +".zip'>DOWNLOAD</a>");
+			if (feature.geometry.type === "Point") {
+				if (feature.properties.path === "undefined") {
+				    layer.bindPopup("code: "+ feature.properties.id
+				    	+"<br/>version: "+feature.properties.version);
+				}
+				else {
+				    layer.bindPopup("code: "+ feature.properties.id
+				    	+"<br/>version: "+feature.properties.version
+				    	+"<br/>path: "+feature.properties.path
+				    	+"<br/><a href='"+ site +feature.properties.path +"'>DOWNLOAD</a>");
+				}
 			}
 		}
-        }
     }).addTo(map);
 });
 
@@ -96,19 +96,19 @@ var dpath20209 = "20209_ina-shi_2020_citygml_4_op";
 $.getJSON(site+dpath20209+"/bldg/"+dpath20209+".geojson", function(data) {
     L.geoJson(data, {
         onEachFeature: function (feature, layer) {
-		if (feature.geometry.type === "Point") {
-			if (feature.properties.name === "undefined") {
-			    layer.bindPopup("code: "+ feature.properties.id
-			    	+"<br/>version: "+feature.properties.version);
-			}
-			else {
-			    layer.bindPopup("code: "+ feature.properties.id
-			    	+"<br/>version: "+feature.properties.version
-			    	+"<br/>name: "+feature.properties.name
-			    	+"<br/><a href='"+ site+dpath20209+"/bldg/"+feature.properties.name +".zip'>DOWNLOAD</a>");
+			if (feature.geometry.type === "Point") {
+				if (feature.properties.path === "undefined") {
+				    layer.bindPopup("code: "+ feature.properties.id
+				    	+"<br/>version: "+feature.properties.version);
+				}
+				else {
+				    layer.bindPopup("code: "+ feature.properties.id
+				    	+"<br/>version: "+feature.properties.version
+				    	+"<br/>path: "+feature.properties.path
+				    	+"<br/><a href='"+ site +feature.properties.path +"'>DOWNLOAD</a>");
+				}
 			}
 		}
-        }
     }).addTo(map);
 });
 
